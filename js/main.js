@@ -1,4 +1,6 @@
 
+
+
 /* //1.-NUMERO MAYOR
 let X1 = prompt("Ingresa el Primer Numero");
 if(X1 < 1 || X1 >100){
@@ -65,6 +67,36 @@ else{
 } */
 
 
+
+//3.-//3.adivinar un número entre el 1-100
+function Adivinar() {
+    let superior=100;
+    let inferior=0;
+    let noEncontrado=true;
+    while(noEncontrado){
+        let mid= parseInt(inferior+((superior-inferior)/2));
+        console.log(mid);
+        console.log (((superior-inferior)/2));
+        
+        if (((superior-inferior)/2)<1){
+            noEncontrado=false;
+            alert("tu número es el " + (parseInt (mid)+1));
+            break;
+        }
+        let res=confirm("tu número es menor o igual a " + mid);
+        if (res){
+            superior=mid;
+        }
+        else {
+            inferior=mid;
+        }
+        console.log(inferior, superior);
+    }
+}
+Adivinar();
+
+
+
 /* //4.	Solicitar un entero (entre el 100 y el 200) y determinar si es múltiplo de 3
 
 let X1 = prompt("Ingresa el Primer Numero");
@@ -104,7 +136,7 @@ else {
 }  */
 
 
-
+/* 
  //6.-Elabora un algoritmo para leer un número y determinar si es par o impar
 let X1 = prompt("Ingresa el primer Numero");
 if(X1 % 2 == 0 ) {
@@ -112,4 +144,4 @@ if(X1 % 2 == 0 ) {
 }
 else {
     alert("El Numero es impar ");
-} 
+}  */
